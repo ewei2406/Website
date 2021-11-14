@@ -1,23 +1,31 @@
 import './App.css';
 import {
     BrowserRouter as Router,
-    Routes, Route, Link
+    Routes, Route, Link,
+    useLocation
 } from "react-router-dom"
 
+import Navbar from './Components/Navbar';
+
+const Location = () => {
+    const location = useLocation()
+    console.log(location);
+    return(
+        <div>
+            {location.pathname}
+        </div>
+    )
+}
+
 const App = () => {
-    const padding = {
-        padding: 5
-    }
 
     return (
         <Router>
-            <div>
-                <Link style={padding} to="/">Home</Link>
-                <Link style={padding} to="/projects">Projects</Link>
-            </div>
+
+            <Navbar/>
 
             <Routes>
-                <Route path="/projects" element={<div>Hello</div>}>
+                <Route path="/projects" element={<div>Projects</div>}>
                 </Route>
                 <Route path="/" element={<div>Home</div>}>
                 </Route>
@@ -26,9 +34,10 @@ const App = () => {
             </Routes>
 
             <div>
-                <i>Note app, Department of Computer Science 2021</i>
+                <i>Copyright 2021</i>
+                <Location/>
             </div>
-            
+
         </Router>
     )
 }
