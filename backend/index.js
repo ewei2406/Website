@@ -7,7 +7,7 @@ App.use(express.static('build'))
 const PORT = process.env.PORT || 3001
 
 App.get('/test', (req, res) => {
-    res.send('Hello from backend')
+    res.send('Hello from backend 2')
 })
 
 App.listen(PORT, () => {
