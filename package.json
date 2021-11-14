@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "git add . && git commit -m 'deploy' && git subtree push --prefix backend heroku master"
+    "deploy": "git add . && git commit -m 'deploy'",
+    "push": "git subtree push --prefix backend heroku master"
   },
   "repository": {
     "type": "git",
