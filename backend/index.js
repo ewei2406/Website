@@ -1,15 +1,24 @@
 const express = require('express')
-const App = express()
+const app = express()
+const path = require('path')
 
-App.use(express.json())
-App.use(express.static('build'))
+app.use(express.json())
+app.use(express.static('build'))
 
 const PORT = process.env.PORT || 3001
 
-App.get('/test', (req, res) => {
+app.get('/test', (req, res) => {
     res.send('Hello from backend 2')
 })
 
-App.listen(PORT, () => {
-    console.log(`App running on Port ${PORT}`)
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build/index.html'), function (err) {
+        if (err) {
+            res.status(500).send(err)
+        }
+    })
+})
+
+app.listen(PORT, () => {
+    console.log(`app running on Port ${PORT}`)
 })

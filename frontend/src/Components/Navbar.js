@@ -28,7 +28,6 @@ const Navwrapper = styled.div`
     align-items: center;
 `
 
-
 const Navbar = ({ toggle, theme }) => {
     return (
         <Navwrapper>
