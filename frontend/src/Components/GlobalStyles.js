@@ -3,10 +3,12 @@ import { createGlobalStyle } from "styled-components"
 export const GlobalStyles = createGlobalStyle`
 
     * {
+        transition: all 0.15s linear;
         --body: ${({ theme }) => theme.body};
         --text: ${({ theme }) => theme.text};
         --bodyLight: ${({ theme }) => theme.bodyLight};
 
+        color: var(--text);
     }
 
     body {

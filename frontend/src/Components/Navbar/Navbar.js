@@ -1,8 +1,9 @@
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import React from "react"
 import styled from 'styled-components'
 
 import MoonIcon from "./Moon"
+import Contacts from "./Contacts"
 
 
 const Navbutton = styled(NavLink)`
@@ -12,7 +13,7 @@ const Navbutton = styled(NavLink)`
     text-decoration: none;
     background-color: var(--body);
     border: 1px solid var(--bodyLight);
-    transition: all 0.1s linear;
+    transition: all 0.15s linear;
 
     &.active {
         background-color: var(--text);
@@ -25,6 +26,7 @@ const Navbutton = styled(NavLink)`
 `
 
 const ButtonWrapper = styled.div`
+    transition: all 0.15s linear;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,22 +39,42 @@ const NavWrapper = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 50px;
     padding: 0;
 `
 
-const Title = styled.div`
+const Title = styled(Link)`
     font-size: 50px;
+    
     font-family: 'Roboto Mono', monospace;
     background-color: var(--body);
+    color: var(--text);
     border: 1px solid var(--bodyLight);
     padding: 5px 10px;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--bodyLight);
+    }
+`
+
+const TitleWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
 `
 
 const Navbar = ({ toggle, theme }) => {
     return (
         <NavWrapper>
-            <Title>Edward Wei</Title>
+
+            <TitleWrapper>
+                <Title to="/">
+                    Edward Wei
+                </Title>
+                <Contacts />
+            </TitleWrapper>
+
             <ButtonWrapper>
                 <Navbutton to="/">Home</Navbutton>
                 <Navbutton to="/projects">Projects</Navbutton>
