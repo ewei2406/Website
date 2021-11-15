@@ -12,6 +12,7 @@ const Navbutton = styled(NavLink)`
     text-decoration: none;
     background-color: var(--body);
     border: 1px solid var(--bodyLight);
+    transition: all 0.1s linear;
 
     &.active {
         background-color: var(--text);
@@ -19,7 +20,7 @@ const Navbutton = styled(NavLink)`
     }
 
     &:hover {
-        background-color: ${({ theme }) => theme.lightColor};
+        background-color: var(--bodyLight);
     }
 `
 

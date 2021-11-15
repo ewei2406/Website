@@ -37,7 +37,7 @@ const NavWrapper = styled.div`
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     margin-bottom: 50px;
     gap: 10px;
     padding: 0;
