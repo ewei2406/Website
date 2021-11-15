@@ -52,15 +52,6 @@ const SocialButton = ({ type, link, color }) => <NoDecLink href={link}>
     </SoButton>
 </NoDecLink>
 
-
-const ContactButton = ({ type, link, innerContent }) => <NoDecLink href={link}>
-    <Boxed className={`bi bi-${type}`}>
-        {innerContent}
-    </Boxed>
-</NoDecLink>
-
-
-
 const Contacts = () => {
     return(
         <div>

@@ -5,6 +5,8 @@ import Header from "./Components/Header"
 import Section from "./Components/Section"
 import Content from "./Components/Content"
 
+import Skills from "./Components/Skills"
+
 import shapes from './Shapes.png'
 
 
@@ -19,14 +21,12 @@ const ImgWrapper = styled.div`
     justify-content: center;
 `
 
-
 const Img = styled.img`
     width: 400px;
     max-width: 80%;
     transition: filter 0.15s linear;
     ${({ theme }) => theme.isDark ? 'filter: invert(1)' : 'filter: invert(0.3)'};
 `
-
 
 const Homepage = () => {
     return(
@@ -43,14 +43,11 @@ const Homepage = () => {
             </Section>
 
             <Section>
-                <Header>About Me</Header>
+                <Header>Skills</Header>
                 <Content>
-                    Hello, my name is Edward Wei. I am from Eugene, OR, and am currently studying computer science at the University of Virginia in Charllotesville, VA.
+                    <Skills/>
                 </Content>
             </Section>
-
-            
-
         </PageWrapper>
     )
 }
