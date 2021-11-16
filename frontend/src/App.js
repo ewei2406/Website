@@ -2,7 +2,7 @@ import './App.css';
 
 import {
     BrowserRouter as Router,
-    Routes, Route, Link
+    Routes, Route
 } from "react-router-dom"
 
 import React, { useEffect, useState } from "react"

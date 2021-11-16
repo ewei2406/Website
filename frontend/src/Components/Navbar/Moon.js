@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const MoonWrapper = styled.i`
     background-color: var(--body);
-    border: 1px solid var(--bodyLight);
+    border: 1px solid var(--text);
     padding: 5px 8px;
 
     transition: all 0.1s linear;

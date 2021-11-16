@@ -12,7 +12,7 @@ const Navbutton = styled(NavLink)`
     display: block;
     text-decoration: none;
     background-color: var(--body);
-    border: 1px solid var(--bodyLight);
+    border: 1px solid var(--text);
     transition: all 0.15s linear;
 
     &.active {
